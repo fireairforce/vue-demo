@@ -11,9 +11,30 @@
     <p v-else>你又失败了</p>
     <div v-n="4">
     </div>
-    <div>
+    <!-- 使用v-bind为之添加class属性，加两个属性值 -->
+    <div :class="[a1,a2]">
       我借你{{money}}，你换我{{a}},还剩{{b}}
     </div>
+    <!-- 当a3为true才有test-1类名，否则没有 -->
+    <div :class="{'test-1':a3}">
+       style object
+    </div>
+    <div :class="obj">
+        style obj
+    </div>
+    <ul>
+      <li v-for="(item,index) in list" :key="item">
+        {{ item }},{{ index }}
+      </li>
+    </ul>
+    <ul>
+      <template v-for="item in list">
+        <li :key="item + 1">Hello</li>
+        <li :key="item">
+           {{ item }}
+        </li>
+      </template>
+    </ul>
   </div>
 </template>
 
@@ -30,7 +51,15 @@ export default {
       number: 0,
       seen:true,
       money: 100,
-      a:10
+      a:10,
+      a1:"test-1",
+      a2:"test-2",
+      a3:true,
+      obj: {
+        'test-1':true,
+        'test-2':true
+      },
+      list:['a','b','c','d']
     }
   },
   computed:{
