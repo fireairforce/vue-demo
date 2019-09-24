@@ -3,7 +3,7 @@
     <!-- 这里渲染的是字符串 --> 
     <h1>{{ msg }}</h1>
      <!-- 这里渲染的是原生的html,同时有个动态的属性值 --> 
-    <div v-html="msg1" v-bind="id"></div>
+    <div v-html="msg1"></div>
     <div>
      {{ number + 1 }}  
     </div> 

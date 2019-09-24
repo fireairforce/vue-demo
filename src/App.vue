@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <HelloWorld msg="<span style='color:red;'>Hello world</span>"/>
+    <ev />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import ev from './components/events.vue';
 import './components/n';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
+    ev
   }
 }
 </script>
