@@ -8,6 +8,10 @@
        <h2 slot="b">那我要加在里面</h2>
     </com>  
     <Vuex />
+    <div>
+      <pagea />
+      <pageb />
+    </div> 
   </div>
 </template>
 
@@ -16,6 +20,8 @@ import HelloWorld from "./components/HelloWorld.vue";
 import ev from "./components/events.vue";
 import com from "./components/com";
 import Vuex from "./components/vuex";
+import pagea from "./components/a";
+import pageb from "./components/b";
 import "./components/n";
 
 export default {
@@ -24,7 +30,9 @@ export default {
     HelloWorld,
     ev,
     com,
-    Vuex
+    Vuex,
+    pagea,
+    pageb
   },
   data() {
     return {
