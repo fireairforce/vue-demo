@@ -7,6 +7,7 @@
        <h1 slot="a">我要加东西在组件下面</h1>
        <h2 slot="b">那我要加在里面</h2>
     </com>  
+    <Vuex />
   </div>
 </template>
 
@@ -14,6 +15,7 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import ev from "./components/events.vue";
 import com from "./components/com";
+import Vuex from "./components/vuex";
 import "./components/n";
 
 export default {
@@ -21,7 +23,8 @@ export default {
   components: {
     HelloWorld,
     ev,
-    com
+    com,
+    Vuex
   },
   data() {
     return {
